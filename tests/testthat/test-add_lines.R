@@ -6,8 +6,8 @@ test_that("lines are the same", {
     unlink("x_usethis.txt")
   })
 
-  x_usethis <- brio::read_file("x_usethis.txt")
-  x_brio <- brio::read_file("x_brio.txt")
+  x_usethis <- brio::read_lines("x_usethis.txt")
+  x_brio <- brio::read_lines("x_brio.txt")
 
   expect_identical(x_usethis, x_brio)
 })
